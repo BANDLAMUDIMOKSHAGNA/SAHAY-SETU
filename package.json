@@ -13,6 +13,9 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
+  "allowScripts":{
+    "esbuild":true
+  },
   "overrides": {
     "rolldown": "1.2.1"
   },
