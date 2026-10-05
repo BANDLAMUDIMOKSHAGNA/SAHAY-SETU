@@ -1,20 +1,44 @@
 export const TRADES = [
-  "Electrician", "Plumber", "Carpenter", "Welder", "Mason", "Painter",
-  "Mechanic", "AC Technician", "Machine Operator", "Driver",
+  "Electrician",
+  "Plumber",
+  "Carpenter",
+  "Welder",
+  "Mason",
+  "Painter",
+  "Mechanic",
+  "AC Technician",
+  "Machine Operator",
+  "Driver",
 ] as const;
 
 export const CITIES = [
-  "Vijayawada", "Guntur", "Amaravati", "Visakhapatnam", "Hyderabad", "Bengaluru", "Chennai",
+  "Vijayawada",
+  "Guntur",
+  "Amaravati",
+  "Visakhapatnam",
+  "Hyderabad",
+  "Bengaluru",
+  "Chennai",
 ] as const;
 
-export const TOOL_CATEGORIES = ["Power tools", "Welding", "Construction", "HVAC", "Plumbing", "Vehicles", "Hand tools"] as const;
+export const TOOL_CATEGORIES = [
+  "Power tools",
+  "Welding",
+  "Construction",
+  "HVAC",
+  "Plumbing",
+  "Vehicles",
+  "Hand tools",
+] as const;
 
 export const JOB_TYPES: Record<string, string> = {
-  full_time: "Full time", part_time: "Part time", contract: "Contract", daily: "Daily wage",
+  full_time: "Full time",
+  part_time: "Part time",
+  contract: "Contract",
+  daily: "Daily wage",
 };
 
-export const inr = (n?: number | null) =>
-  n == null ? "—" : "₹" + n.toLocaleString("en-IN");
+export const inr = (n?: number | null) => (n == null ? "—" : "₹" + n.toLocaleString("en-IN"));
 
 export function payRange(min?: number | null, max?: number | null, unit = "day") {
   const u = unit === "month" ? "/month" : unit === "once" ? "" : "/" + unit;
@@ -32,4 +56,9 @@ export function timeAgo(iso: string) {
 }
 
 export const initials = (name?: string | null) =>
-  (name ?? "?").split(" ").filter(Boolean).slice(0, 2).map((p) => p[0]?.toUpperCase()).join("");
+  (name ?? "?")
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((p) => p[0]?.toUpperCase())
+    .join("");

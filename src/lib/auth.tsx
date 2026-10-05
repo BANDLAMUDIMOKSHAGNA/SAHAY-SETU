@@ -14,7 +14,13 @@ type AuthCtx = {
   refreshProfile: () => void;
 };
 
-const Ctx = createContext<AuthCtx>({ session: null, ready: false, profile: null, isAdmin: false, refreshProfile: () => {} });
+const Ctx = createContext<AuthCtx>({
+  session: null,
+  ready: false,
+  profile: null,
+  isAdmin: false,
+  refreshProfile: () => {},
+});
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
@@ -39,7 +45,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     queryKey: ["me", uid],
     enabled: !!uid,
     queryFn: async () => {
-      const { data } = await supabase.from("profiles").select("*").eq("user_id", uid!).maybeSingle();
+      const { data } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("user_id", uid!)
+        .maybeSingle();
       return data;
     },
   });
@@ -57,7 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       value={{
         session,
         ready,
-        profile: uid ? profileQ.data ?? null : null,
+        profile: uid ? (profileQ.data ?? null) : null,
         isAdmin: !!adminQ.data,
         refreshProfile: () => qc.invalidateQueries({ queryKey: ["me", uid] }),
       }}

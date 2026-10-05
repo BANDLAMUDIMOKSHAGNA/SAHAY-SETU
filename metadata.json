@@ -1,0 +1,5 @@
+{
+  "name": "Sahay-Setu Bridge",
+  "description": "Full-stack web application for the SAHAY-SETU platform: connecting workers, communities, rentals, jobs, and tools.",
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
