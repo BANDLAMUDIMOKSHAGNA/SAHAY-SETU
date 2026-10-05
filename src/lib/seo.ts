@@ -1,7 +1,7 @@
 export function seo(title: string, description: string) {
   const t =
-    title === "SAHAY-SETU" || title === "SAHAY-SETU — Work. Connect. Grow."
-      ? "SAHAY-SETU — Work. Connect. Grow."
+    title === "SAHAY-SETU" || title === "SAHAY-SETU"
+      ? "SAHAY-SETU"
       : title.includes("SAHAY-SETU")
         ? title
         : `${title};
