@@ -1,15 +1,9 @@
 export function seo(title: string, description: string) {
-  const t =
-    title === "SAHAY-SETU" || title === "SAHAY-SETU"
-      ? "SAHAY-SETU"
-      : title.includes("SAHAY-SETU")
-        ? title
-        : `${title};
   return {
     meta: [
-      { title: t },
+      { title },
       { name: "description", content: description },
-      { property: "og:title", content: t },
+      { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

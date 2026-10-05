@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function SiteFooter() {
   return (
@@ -53,8 +54,16 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} SAHAY-SETU · Listings marked "sample" are development data.
+      <div className="border-t py-4">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-xs text-muted-foreground sm:flex-row">
+          <div>
+            © {new Date().getFullYear()} SAHAY-SETU · Listings marked "sample" are development data.
+          </div>
+          <div className="flex items-center gap-2">
+            <span>Theme:</span>
+            <ThemeToggle className="h-7 w-7" />
+          </div>
+        </div>
       </div>
     </footer>
   );

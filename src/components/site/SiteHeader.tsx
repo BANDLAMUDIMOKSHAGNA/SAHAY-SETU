@@ -13,6 +13,7 @@ import {
   Shield,
 } from "lucide-react";
 import { Logo } from "./Logo";
+import { ThemeToggle, MobileThemeSelector } from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import {
@@ -92,6 +93,12 @@ export function SiteHeader() {
                 </Link>
               ))}
             </nav>
+            <div className="mt-6 border-t pt-4">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Theme
+              </p>
+              <MobileThemeSelector />
+            </div>
           </SheetContent>
         </Sheet>
         <Logo />
@@ -120,6 +127,7 @@ export function SiteHeader() {
           </label>
         </form>
         <div className="ml-auto flex items-center gap-1 lg:ml-0">
+          <ThemeToggle />
           <Button asChild variant="ghost" size="icon" className="lg:hidden" aria-label="Search">
             <Link to="/search" search={{ q: "" }}>
               <Search className="h-4 w-4" />
