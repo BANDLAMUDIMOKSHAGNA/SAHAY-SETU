@@ -4,7 +4,7 @@ export function seo(title: string, description: string) {
       ? "SAHAY-SETU — Work. Connect. Grow."
       : title.includes("SAHAY-SETU")
         ? title
-        : `${title} · SAHAY-SETU`;
+        : `${title};
   return {
     meta: [
       { title: t },

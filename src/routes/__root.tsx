@@ -70,7 +70,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SAHAY-SETU — Work. Connect. Grow." },
+      { title: "SAHAY-SETU" },
       {
         name: "description",
         content: "Jobs, skilled workers, tool rentals and trade communities in one place.",
