@@ -1,5 +1,10 @@
 export function seo(title: string, description: string) {
-  const t = `${title} · SAHAY-SETU`;
+  const t =
+    title === "SAHAY-SETU" || title === "SAHAY-SETU — Work. Connect. Grow."
+      ? "SAHAY-SETU — Work. Connect. Grow."
+      : title.includes("SAHAY-SETU")
+        ? title
+        : `${title} · SAHAY-SETU`;
   return {
     meta: [
       { title: t },
