@@ -10,7 +10,7 @@ import { TRADES } from "@/lib/constants";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Jobs, skilled workers and tool rentals", "Find trade work, hire verified electricians, plumbers, welders and more, rent equipment and join trade communities across South India."),
+  head: () => seo("SAHAY-SETU", "Find trade work, hire verified electricians, plumbers, welders and more, rent equipment and join trade communities across South India."),
   component: Home,
 });
 
